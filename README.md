@@ -2,7 +2,9 @@
 
 ## Introduction 
 
-//
+**Stage Score** is a live music review blog platform built with Django, featuring full CRUD functionality that allows users to create, read, update, and delete reviews. Users can explore reviews of live gigs, discover insights about their favorite artists, and share their experiences from music events.
+
+The aim of this project is to provide an engaging space for music enthusiasts to celebrate live performances, connect with a like-minded community, and explore a dynamic catalog of gig reviews. Stage Score brings the excitement of live music to the digital world, offering a seamless experience for discovering, discussing, and sharing the magic of the stage.
 
 Developed by //
 
@@ -14,7 +16,6 @@ View live site here: [Stage Score website]()
 
 - [Project Outline](#project-outline)
 - [UX Design](#ux-design)
-   - [User Stories](#user-stories)
    - [Colours](#colours)
      - [Colour Palette](#colour-palette)
      - [Contrast](#contrast)
@@ -22,6 +23,11 @@ View live site here: [Stage Score website]()
    - [Imagery](#imagery)
    - [Favicon](#favicon)
    - [Logo](#logo)
+- [User Stories](#user-stories)
+   - [Developer](#developer)
+   - [New Site Users](#new-site-users)
+   - [Registered Users](#registered-users)
+   - [Site Admin](#site-admin)
    - [Wireframes](#wireframes)
 - [Features](#features)
    - [Navigation](#navigation)
@@ -53,6 +59,42 @@ View live site here: [Stage Score website]()
     - [Acknowledgements](#acknowledgements)
 
 ## Project Outline
+
+### About
+
+Stage Score is a dynamic live music review platform built with Django, designed to celebrate the thrill of live performances and provide a space for music lovers to explore, share, and engage with gig reviews.
+
+The goal of this project is to create an accessible and engaging platform for concertgoers, music enthusiasts, and aspiring reviewers alike. Built with the powerful Django framework, Stage Score combines functionality with user-friendly design to deliver an enjoyable and seamless experience for anyone passionate about live music.
+
+### Problem Statement
+
+Many live music enthusiasts struggle to find a dedicated platform where they can read authentic gig reviews, share their experiences, and discover insights about their favorite artists. While concertgoers often want to relive performances and find recommendations for future gigs, aspiring music reviewers lack a centralized space to showcase their work and connect with a like-minded community. This gap leaves music lovers without a cohesive, community-driven hub to celebrate the magic of live performances.
+
+### Purpose
+
+**Stage Score** aims to solve this problem by offering a vibrant and interactive platform where users can:
+
+- Discover authentic reviews of live music performances across different genres and venues.
+- Share their personal gig experiences and opinions with a larger community.
+- Explore curated insights about their favorite artists, bands, and events.
+- Connect with fellow music lovers who share a passion for live performances.
+- Provide a space for aspiring music reviewers to showcase their critiques and build an audience.
+
+By offering these features, Stage Score becomes a hub for celebrating live music, fostering connections, and amplifying the voices of concertgoers and reviewers.
+
+### Target Audience
+
+Stage Score is designed to cater to a wide range of live music enthusiasts, including:
+- Concertgoers
+   - People who regularly attend gigs and want to share or read experiences about live performances.
+- Music Enthusiasts
+   - Individuals passionate about live music who are looking for insights and reviews to guide their future concert plans.
+- Aspiring Music Reviewers
+   - Hobbyists or professionals who want to write detailed gig reviews, share their perspectives, and grow their audience.
+- Casual Listeners
+   - Fans looking to discover new artists, events, or live music opportunities through credible reviews.
+- Artists and Industry Professionals
+   - Musicians, bands, and event organizers seeking feedback, exposure, and a way to connect with their audience.
 
 ## UX Design
 
