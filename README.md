@@ -1,131 +1,329 @@
-<<<<<<<<< Temporary merge branch 1
-Ray's Test Commit
-=========
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Stage Score
 
+## Introduction 
 
+**Stage Score** is a live music review blog platform built with Django, featuring full CRUD functionality that allows users to create, read, update, and delete reviews. Users can explore reviews of live gigs, discover insights about their favorite artists, and share their experiences from music events.
 
-## Gitpod Reminders
+The aim of this project is to provide an engaging space for music enthusiasts to celebrate live performances, connect with a like-minded community, and explore a dynamic catalog of gig reviews. Stage Score brings the excitement of live music to the digital world, offering a seamless experience for discovering, discussing, and sharing the magic of the stage.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Developed by //
 
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
-
-### Connecting your Mongo database
-
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+View live site here: [Stage Score website]()
 
 ------
 
-## Release History
+## Table of Contents
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- [Project Outline](#project-outline)
+- [UX Design](#ux-design)
+   - [Colours](#colours)
+     - [Colour Palette](#colour-palette)
+     - [Contrast](#contrast)
+   - [Fonts](#fonts)
+   - [Imagery](#imagery)
+   - [Favicon](#favicon)
+   - [Logo](#logo)
+- [User Stories](#user-stories)
+   - [Developer](#developer)
+   - [New Site Users](#new-site-users)
+   - [Registered Users](#registered-users)
+   - [Site Admin](#site-admin)
+   - [Wireframes](#wireframes)
+- [Features](#features)
+   - [Navigation](#navigation)
+   - [Pages](#pages)
+     - [Page 1](#page-1)
+     - [Page 2](#page-2)
+     - [Page 3](#page-3)
+   - [Footer](#footer)
+   - [Responsive Design](#responsive-design)
+   - [Future Features](#future-features)
+- [Database Design](#database-design)
+- [Agile Development Process](#agile-development-process)
+   - [MoSCoW Prioritisation](#moscow-prioritisation)
+   - [GitHub Projects](#github-projects)
+   - [GitHub Issues](#github-issues)
+- [Deployment](#deployment)
+- [Built With](#built-with)
+   - [Technology and Languages](#technology-and-languages)
+   - [Libraries and Frameworks](#libraries-and-frameworks)
+   - [Tools and Programs](#tools-and-programs)
+- [Development](#development)
+   - [Ideation](#ideation)
+   - [Collaboration Tools](#collaboration-tools)
+- [Testing](#testing)
+- [Credits](#credits)
+    - [Content](#content)
+    - [Code](#code)
+    - [Media](#media)
+    - [Acknowledgements](#acknowledgements)
 
-**June 18, 2024,** Add Mongo back into template
+## Project Outline
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+### About
 
-**May 28 2024:** Fix Mongo and Links installs
+Stage Score is a dynamic live music review platform built with Django, designed to celebrate the thrill of live performances and provide a space for music lovers to explore, share, and engage with gig reviews.
 
-**April 26 2024:** Update node version to 16
+The goal of this project is to create an accessible and engaging platform for concertgoers, music enthusiasts, and aspiring reviewers alike. Built with the powerful Django framework, Stage Score combines functionality with user-friendly design to deliver an enjoyable and seamless experience for anyone passionate about live music.
 
-**September 20 2023:** Update Python version to 3.9.17.
+### Problem Statement
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+Many live music enthusiasts struggle to find a dedicated platform where they can read authentic gig reviews, share their experiences, and discover insights about their favorite artists. While concertgoers often want to relive performances and find recommendations for future gigs, aspiring music reviewers lack a centralized space to showcase their work and connect with a like-minded community. This gap leaves music lovers without a cohesive, community-driven hub to celebrate the magic of live performances.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Purpose
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+**Stage Score** aims to solve this problem by offering a vibrant and interactive platform where users can:
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- Discover authentic reviews of live music performances across different genres and venues.
+- Share their personal gig experiences and opinions with a larger community.
+- Explore curated insights about their favorite artists, bands, and events.
+- Connect with fellow music lovers who share a passion for live performances.
+- Provide a space for aspiring music reviewers to showcase their critiques and build an audience.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+By offering these features, Stage Score becomes a hub for celebrating live music, fostering connections, and amplifying the voices of concertgoers and reviewers.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Target Audience
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+Stage Score is designed to cater to a wide range of live music enthusiasts, including:
+- Concertgoers
+   - People who regularly attend gigs and want to share or read experiences about live performances.
+- Music Enthusiasts
+   - Individuals passionate about live music who are looking for insights and reviews to guide their future concert plans.
+- Aspiring Music Reviewers
+   - Hobbyists or professionals who want to write detailed gig reviews, share their perspectives, and grow their audience.
+- Casual Listeners
+   - Fans looking to discover new artists, events, or live music opportunities through credible reviews.
+- Artists and Industry Professionals
+   - Musicians, bands, and event organizers seeking feedback, exposure, and a way to connect with their audience.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## UX Design
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Colours
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### Colour Palette 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+#### Contrast
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Fonts
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Imagery
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Favicon
 
-------
+### Logo
 
-## FAQ about the uptime script
+## User Stories
 
-**Why have you added this script?**
+### Developer
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- As a developer I can get an idea of the whole design system so that I can work on the UI/UX design effectively. `Must Have`
 
-**How will this affect me?**
+- As a developer I can implement authentication for admins so that only authorised users can manage events. `Must Have`
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### New Site Users
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- As a site visitor I can clearly see the website's purpose so that I can decide what features I would like to use. `Must Have`
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+- As a site visitor I can create an account so that I have access to all the website features. `Must Have`
 
-**So….?**
+- As a site visitor/user I can easily navigate the site on any device so that I have a seamless experience whether on desktop or mobile. `Must Have`
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- As a first-time visitor I can see a list of popular events so that I can explore gigs without signing up. `Won't Have`
 
-**Can I opt out?**
+### Registered Users
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- As a commenter I can delete my comments so that I can remove opinions I no longer want to be shared. `Should Have`
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+- As a registered user I can comment on posts so that I can engage in discussions with other users. `Should Have`
 
-**Anything more?**
+- As a registered user I can update my profile information so that other users can identify me. `Should Have`
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- As a user I can log in to my account so that I can access personalised features. `Must Have`
 
----
+- As a user I can log out of my account at any time so that if I want to end my session. `Must Have`
 
-Happy coding!
->>>>>>>>> Temporary merge branch 2
+- As a user I can create posts so that I can share my thoughts about different events or artists. `Must Have`
+
+- As a user I can edit any posts / reviews I have made so that I can update any information. `Must Have`
+
+- As a registered user I can view a post’s likes so that I can identify the most captivating posts. `Could Have`
+
+- As a user I can delete my posts so that I can remove content I no longer want to share. `Must Have`
+
+- As a registered user I can click a button icon so that I can like posts or remove the like if I change my mind. `Could Have`
+
+- As a user I can view a post so that I can see all the info about it. `Must Have`
+
+- As a user I can search for events by location so that I can find gigs happening near me. `Could Have`
+
+- As a user I can follow my favourite artists so that I can stay updated on their gigs. `Won't Have`
+
+### Site Admin
+
+- As an admin I can create, read, update and delete posts so that I can manage posts on the websites. `Must Have`
+
+### Wireframes
+
+## Features
+
+### MVP Features
+
+| Feature                         |
+|---------------------------------|
+| Home Page (Website Purpose)     |
+| Update Profile                  |
+| User Registration and Login     |
+| Admin Post Management           |
+| Create, Edit, and Delete Posts/Reviews |
+| Secure Admin Access             |
+| View Posts                      |
+| Log Out                         |
+| Responsive Design Experience    |
+| Wireframing the Website         |
+| Comment on Posts                |
+
+These features directly address the core problem identified: creating a platform for live music lovers to share, explore, and engage with gig reviews.
+
+#### Home Page (Website Purpose)
+- **Feature**: Clearly display the website’s purpose and main features.  
+- **Problem Solved**: Allows site visitors to quickly understand the value of the platform.
+
+#### User Registration and Login
+- **Feature**: User registration and login functionality.  
+- **Problem Solved**: Provides personalized access to features like creating posts, commenting, and profile management.
+
+#### Create, Edit, and Delete Posts/Reviews
+- **Feature**: CRUD functionality for posts/reviews.  
+- **Problem Solved**: Enables users to share and update their thoughts about gigs and events.
+
+#### View Posts
+- **Feature**: Ability to view posts and reviews with all relevant details.  
+- **Problem Solved**: Gives users access to gig reviews and information shared by others.
+
+#### Responsive Design Experience
+- **Feature**: Full responsiveness for seamless navigation on desktop and mobile devices.  
+- **Problem Solved**: Ensures accessibility and usability across all devices for all users.
+
+#### Comment on Posts
+- **Feature**: Users can leave comments on posts.  
+- **Problem Solved**: Promotes discussion and community engagement around shared experiences.
+
+#### Update Profile
+- **Feature**: Users can update profile information, such as display name and bio.  
+- **Problem Solved**: Enhances personalization and allows users to build an identity on the platform.
+
+#### Admin Post Management
+- **Feature**: Admins can create, read, update, and delete posts.  
+- **Problem Solved**: Ensures content quality and moderation to maintain platform integrity.
+
+#### Secure Admin Access
+- **Feature**: Admin authentication system to restrict unauthorized access.  
+- **Problem Solved**: Protects administrative controls from misuse.
+
+#### Log Out
+- **Feature**: Users can log out of their account.  
+- **Problem Solved**: Ensures privacy and security of user sessions.
+
+#### Wireframing the Website
+- **Feature**: Design system planned through wireframes (developer-focused).  
+- **Problem Solved**: Provides a visual roadmap for an effective and user-friendly UI/UX design.
+
+### Additional Features
+
+These features enhance the platform and further address user needs, creating a richer and more engaging experience.
+
+
+| Feature (Iteration 2)                   |
+|---------------------------|
+| Delete Comments           |
+| View Likes on Posts       |
+| Like/Unlike Posts         |
+| Find Events by Location   |
+
+#### Delete Comments
+- **Feature**: Users can delete their own comments.  
+- **Problem Solved**: Gives users control over their shared opinions.
+
+#### View Likes on Posts
+- **Feature**: Users can see how many likes a post has received.  
+- **Problem Solved**: Highlights popular or engaging content for better discovery.
+
+#### Like/Unlike Posts
+- **Feature**: Users can like or unlike posts using a button/icon.  
+- **Problem Solved**: Allows users to express appreciation for posts and reviews.
+
+#### Find Events by Location
+- **Feature**: Search for events based on location (city or venue).  
+- **Problem Solved**: Helps users discover gigs relevant to their location.
+
+
+| Feature (Iteration 3)                   |
+|---------------------------|
+| Follow Favourite Artists  |
+| Explore Popular Events    |
+
+#### Follow Favourite Artists
+- **Feature**: Users can follow their favorite artists to stay updated on their gigs.  
+- **Problem Solved**: Enhances user engagement and personalizes event discovery.
+
+#### Explore Popular Events
+- **Feature**: Display a list of popular events for first-time visitors.  
+- **Problem Solved**: Encourages new visitors to explore and engage without signing up immediately.
+
+### Navigation
+
+### Pages
+
+#### Page 1
+
+#### Page 2
+
+#### Page 3
+
+### Footer
+
+### Responsive Design
+
+### Future Features
+
+## Database Design
+
+## Agile Development Process
+
+### MoSCoW Prioritisation
+
+### GitHub Projects
+
+### GitHub Issues
+
+## Deployment
+
+## Built With
+
+### Technology and Languages
+
+### Libraries and Frameworks
+
+### Tools and Programs
+
+## Development
+
+### Ideation
+
+### Collaboration Tools
+
+## Testing
+
+## Credits
+
+### Content
+
+### Code
+
+### Media
+
+### Acknowledgements
+
+
+
+
