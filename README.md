@@ -52,3 +52,84 @@ View live site here: [Stage Score website]()
     - [Media](#media)
     - [Acknowledgements](#acknowledgements)
 
+## Project Outline
+
+## UX Design
+
+### User Stories
+
+### Colours
+
+#### Colour Palette 
+
+#### Contrast
+
+### Fonts
+
+### Imagery
+
+### Favicon
+
+### Logo
+
+### Wireframes
+
+## Features
+
+### Navigation
+
+### Pages
+
+#### Page 1
+
+#### Page 2
+
+#### Page 3
+
+### Footer
+
+### Responsive Design
+
+### Future Features
+
+## Database Design
+
+## Agile Development Process
+
+### MoSCoW Prioritisation
+
+### GitHub Projects
+
+### GitHub Issues
+
+## Deployment
+
+## Built With
+
+### Technology and Languages
+
+### Libraries and Frameworks
+
+### Tools and Programs
+
+## Development
+
+### Ideation
+
+### Collaboration Tools
+
+## Testing
+
+## Credits
+
+### Content
+
+### Code
+
+### Media
+
+### Acknowledgements
+
+
+
+
