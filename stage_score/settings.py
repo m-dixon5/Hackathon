@@ -172,6 +172,8 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 LOGOUT_REDIRECT_URL = '/'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 customColorPalette = [
         {
             'color': 'hsl(4, 90%, 58%)',
