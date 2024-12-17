@@ -31,6 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-mdixon5-hackathon-m43s7ximefd.ws.codeinstitute-ide.net', '.herokuapp.com', '8000-mdixon5-hackthon-70ges9rn0vd.ws.codeinstitute-ide.net', '8000-mdixon5-hackathon-md139m8eons.ws.codeinstitute-ide.net']
 
+CSRF_TRUSTED_ORIGINS = ['https://*.codeinstitute-ide.net', 'https://*.herokuapp.com']
 
 # Application definition
 
@@ -42,6 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'django_summernote',
 
     # Custom apps
@@ -55,6 +60,10 @@ INSTALLED_APPS = [
     'django_ckeditor_5',
 ]
 
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -63,6 +72,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'stage_score.urls'
@@ -70,7 +80,9 @@ ROOT_URLCONF = 'stage_score.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,6 +130,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
