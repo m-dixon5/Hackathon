@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from .models import Profile
-from blog.models import Review  
+from music_blog.models import Review  
 
 # Create your views here.
 

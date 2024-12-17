@@ -51,8 +51,8 @@ INSTALLED_APPS = [
 
     # Custom apps
     'home.apps.CoreConfig',
-    'blog.apps.BlogConfig',
     'user.apps.UserConfig',
+    'music_blog.apps.MusicBlogConfig',
 
     # Third-party apps
     'cloudinary_storage',
