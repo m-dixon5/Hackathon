@@ -33,15 +33,11 @@ class Category(models.Model):
     title = models.CharField(max_length=30, choices=GENRE_CHOICES, unique=True)
     slug = models.SlugField(unique=True, blank=True)
 
-    def save(self, *args, **kwargs):
-        """
-        Auto-generate slug from title if not provided
-        """
-        if not self.slug:
-            self.slug = slugify(self.get_title_display())
-        super().save(*args, **kwargs)
-
     def __str__(self):
         return self.get_title_display()
+    
+    def get_absolute_url(self):
+        return f"/{self.slug}"
+
 
 
