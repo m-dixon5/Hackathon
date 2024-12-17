@@ -31,6 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-mdixon5-hackathon-m43s7ximefd.ws.codeinstitute-ide.net', '.herokuapp.com', '8000-mdixon5-hackthon-70ges9rn0vd.ws.codeinstitute-ide.net']
 
+CSRF_TRUSTED_ORIGINS = ['https://*.codeinstitute-ide.net', 'https://*.herokuapp.com']
 
 # Application definition
 
