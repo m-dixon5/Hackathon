@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
-from django_ckeditor_5.fields import CKEditor5Field 
+# from django_ckeditor_5.fields import CKEditor5Field 
 
 # Create your models here.
 
@@ -48,7 +48,7 @@ class Review(models.Model):
     title = models.CharField(max_length=255)
     image = models.FileField(upload_to='media/blog')
     slug = models.SlugField(default='')
-    content = CKEditor5Field('Content', config_name='extends')
+    content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey(Category, related_name='posts', on_delete=models.CASCADE)
     location = models.CharField(max_length=30)
@@ -63,4 +63,5 @@ class Review(models.Model):
     
     def get_absolute_url(self):
         return '/%s/' % self.slug
+
 
