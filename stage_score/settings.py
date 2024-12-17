@@ -58,6 +58,8 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'cloudinary',
     'django_ckeditor_5',
+    'crispy_forms',
+    'crispy_bootstrap4',
 ]
 
 SITE_ID = 1
