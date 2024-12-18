@@ -1,6 +1,6 @@
 html, body {
     height: 100%;
-    background-color: #131313;
+    background-color: #000f16;
     overflow-x: hidden;
     
 }
@@ -14,4 +14,39 @@ body {
 main {
     flex: 1 0 auto;
     
+}
+
+/* Navbar */
+#nav {
+    background-color: #000f16 !important;
+}
+
+.navbar-brand img {
+    height: 55px;
+    width: 180px;
+}
+
+.nav-link{
+    color: #000f16;
+    margin: 0px 15px;
+}
+
+.link-container {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+#toggler {
+    color: #ffffff !important;
+}
+
+/* Footer */
+.register-text {
+    color: #ffffff;
+}
+
+.copyright {
+    color: #ffffff;
 }
