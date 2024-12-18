@@ -76,6 +76,8 @@ All HTML pages were validated and received a 'xxxxxxxxx' result, as shown above.
 | Profile  | [no errors](documentation/testing/profile_admin.png) | [no errors](documentation/testing/profile_forms.png) | [no errors](documentation/testing/profile_models.png) | [no errors](documentation/testing/profile_urls.png) | [no errors](documentation/testing/profile_views.png) |
 | Stage Score main app | na | na | na | [no errors](documentation/testing/stagescore_urls.png) | na |
 | Home | na | na | na | [no errors](documentation/testing/home_urls.png) | [no errors](documentation/testing/home_views.png) |
+| User | [no errors](/documentation/images/user-app-admin.py.png) | [no errors](/documentation/images/user-app-forms.py.png) | [no errors](/documentation/images/user-app-models.py.png) | [no errors](/documentation/images/user-app-urls.py.png) | [no errors](/documentation/images/) |
+
 
 <hr>
 
