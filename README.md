@@ -1,5 +1,7 @@
 # Stage Score
 
+![Homepage image](/documentation/images/homepageimage.png)
+
 ## Introduction 
 
 **Stage Score** is a live music review blog platform built with Django, featuring full CRUD functionality that allows users to create, read, update, and delete reviews. Users can explore reviews of live gigs, discover insights about their favorite artists, and share their experiences from music events.
@@ -9,6 +11,8 @@ The aim of this project is to provide an engaging space for music enthusiasts to
 Developed by [Matt Dixon](https://github.com/m-dixon5)   |   [Guissela Chumbe](https://github.com/guisselacp) |   [Ray Carter](https://github.com/raycarter23) 
 
 View live site here: [Stage Score website](https://stage-score-8b082b4e7102.herokuapp.com/)
+
+
 
 ------
 
@@ -127,10 +131,6 @@ For our colours, we achieved the following contrast ratios:
 We're using [Google Fonts](https://fonts.google.com/), we selected 'Poppins' and 'Inter' fonts to our webpage.
 
 ![Fonts](documentation/images/typography.png) 
-
-### Imagery
-
-### Favicon
 
 ### Logo
 
@@ -385,12 +385,6 @@ Further information is available in the [requirements.txt file](requirements.txt
 ### Tools and Programs
 
 - [Lucid Chart](https://www.lucidchart.com/pages/) used to create Entity Relationship Diagram.
-
-## Development
-
-### Ideation
-
-### Collaboration Tools
 
 ## Testing
 
