@@ -18,7 +18,7 @@ main {
 
 /* Navbar */
 #nav {
-    background-color: #000f16 !important;
+    background-color:#115170 !important;
 }
 
 .navbar-brand img {
@@ -27,7 +27,7 @@ main {
 }
 
 .nav-link{
-    color: #000f16;
+    color: #023047;
     margin: 0px 15px;
 }
 
@@ -43,6 +43,8 @@ main {
 }
 
 /* Footer */
+
+
 .register-text {
     color: #ffffff;
 }
