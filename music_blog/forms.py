@@ -1,12 +1,13 @@
 from django import forms
-from .models import Review
-from django_ckeditor_5.widgets import CKEditor5Widget
+from .models import Review, Comment
         
 class PostForm(forms.ModelForm):
 
     class Meta:
         model = Review
-        fields = ('title', 'content', 'category', 'image')
-        widgets = {
-            "content": CKEditor5Widget(config_name="extends")
-        }
+        fields = ('title', 'content', 'category', 'image', 'location')
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('comment',)
