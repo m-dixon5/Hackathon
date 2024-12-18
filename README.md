@@ -104,15 +104,29 @@ Stage Score is designed to cater to a wide range of live music enthusiasts, incl
 
 #### Colour Palette 
 
+We selected this colour scheme for our website:
+
+![Colour Palette](documentation/images/stage_score_colour_palette.png) 
+
 #### Contrast
 
 ### Fonts
+
+We're using [Google Fonts](https://fonts.google.com/), we selected 'Poppins' and 'Inter' fonts to our webpage.
+
+![Fonts](documentation/images/typography.png) 
 
 ### Imagery
 
 ### Favicon
 
 ### Logo
+
+We decided to use the following logo:
+
+![Logo](documentation/images/stage_score_logo.png) 
+![Logo 1](documentation/images/stage_score_logo1.png) 
+
 
 ## User Stories
 
@@ -182,7 +196,7 @@ Stage Score is designed to cater to a wide range of live music enthusiasts, incl
 | Log Out                         |
 | Responsive Design Experience    |
 | Wireframing the Website         |
-| Comment on Posts                |
+              |
 
 These features directly address the core problem identified: creating a platform for live music lovers to share, explore, and engage with gig reviews.
 
@@ -206,10 +220,6 @@ These features directly address the core problem identified: creating a platform
 - **Feature**: Full responsiveness for seamless navigation on desktop and mobile devices.  
 - **Problem Solved**: Ensures accessibility and usability across all devices for all users.
 
-#### Comment on Posts
-- **Feature**: Users can leave comments on posts.  
-- **Problem Solved**: Promotes discussion and community engagement around shared experiences.
-
 #### Update Profile
 - **Feature**: Users can update profile information, such as display name and bio.  
 - **Problem Solved**: Enhances personalization and allows users to build an identity on the platform.
@@ -230,17 +240,41 @@ These features directly address the core problem identified: creating a platform
 - **Feature**: Design system planned through wireframes (developer-focused).  
 - **Problem Solved**: Provides a visual roadmap for an effective and user-friendly UI/UX design.
 
-### Additional Features
 
-These features enhance the platform and further address user needs, creating a richer and more engaging experience.
+
+
+### Navigation
+
+### Pages
+
+#### Home
+
+#### Reviews
+
+#### Add Review
+
+#### Profile
+
+### Footer
+
+### Responsive Design
+
+### Future Features
+
+These features would enhance the platform and address user needs, creating a richer and more engaging experience.
 
 
 | Feature (Iteration 2)                   |
 |---------------------------|
+| Comment on Posts  |
 | Delete Comments           |
 | View Likes on Posts       |
 | Like/Unlike Posts         |
 | Find Events by Location   |
+
+#### Comment on Posts
+- **Feature**: Users can leave comments on posts.  
+- **Problem Solved**: Promotes discussion and community engagement around shared experiences.
 
 #### Delete Comments
 - **Feature**: Users can delete their own comments.  
@@ -272,21 +306,6 @@ These features enhance the platform and further address user needs, creating a r
 - **Feature**: Display a list of popular events for first-time visitors.  
 - **Problem Solved**: Encourages new visitors to explore and engage without signing up immediately.
 
-### Navigation
-
-### Pages
-
-#### Page 1
-
-#### Page 2
-
-#### Page 3
-
-### Footer
-
-### Responsive Design
-
-### Future Features
 
 ## Database Design
 
@@ -319,8 +338,6 @@ We used the MoSCoW Prioritization method for Stage Score, with this four label t
 
 ## Deployment
 
-## Built With
-
 ### Technology and Languages
 
 - HTML
@@ -329,7 +346,6 @@ We used the MoSCoW Prioritization method for Stage Score, with this four label t
 - Python
 - [Git](https://git-scm.com/) used for version control.
 - [Github](https://www.github.com) used for online storage of codebase and Projects tool.
-- [Lucid Chart](https://www.lucidchart.com/pages/) used to create Entity Relationship Diagram.
 - [Figma](https://www.figma.com) for project design planning and wireframe creation.
 - [Coolors](https://coolors.co/) to create the website colour palette.
 - [Adobe Color](https://color.adobe.com) for colour theme creation and accessibility checkers.
@@ -341,7 +357,23 @@ We used the MoSCoW Prioritization method for Stage Score, with this four label t
 
 ### Libraries and Frameworks
 
+- Bootstrap v4
+- Django v4.2.17
+- Django AllAuth v0.57.2
+- Django Crispy Forms v2.3
+- Crispy Bootstrap4 v2024.10
+- Django Summernote v0.8.20.0
+- Django-Ckeditor-5 v.0.2.15
+- Python Slugify v8.0.1
+- Urlib3 v.1.26.20
+- Python-OpenID v.3.2.0
+- PyJWT v.2.10.1
+  
+Further information is available in the [requirements.txt file](requirements.txt)
+
 ### Tools and Programs
+
+- [Lucid Chart](https://www.lucidchart.com/pages/) used to create Entity Relationship Diagram.
 
 ## Development
 
