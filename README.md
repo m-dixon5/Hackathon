@@ -55,7 +55,6 @@ View live site here: [Stage Score website](https://stage-score-8b082b4e7102.hero
    - [Collaboration Tools](#collaboration-tools)
 - [Testing](#testing)
 - [Credits](#credits)
-    - [Content](#content)
     - [Code](#code)
     - [Media](#media)
     - [Acknowledgements](#acknowledgements)
@@ -209,7 +208,8 @@ We decided to use the following logo:
 | Log Out                         |
 | Responsive Design Experience    |
 | Wireframing the Website         |
-              |
+| Comment on Posts  |
+| Delete Comments                  |
 
 These features directly address the core problem identified: creating a platform for live music lovers to share, explore, and engage with gig reviews.
 
@@ -253,6 +253,13 @@ These features directly address the core problem identified: creating a platform
 - **Feature**: Design system planned through wireframes (developer-focused).  
 - **Problem Solved**: Provides a visual roadmap for an effective and user-friendly UI/UX design.
 
+#### Comment on Posts
+- **Feature**: Users can leave comments on posts.  
+- **Problem Solved**: Promotes discussion and community engagement around shared experiences.
+
+#### Delete Comments
+- **Feature**: Users can delete their own comments.  
+- **Problem Solved**: Gives users control over their shared opinions.
 
 
 
@@ -279,19 +286,10 @@ These features would enhance the platform and address user needs, creating a ric
 
 | Feature (Iteration 2)                   |
 |---------------------------|
-| Comment on Posts  |
-| Delete Comments           |
 | View Likes on Posts       |
 | Like/Unlike Posts         |
 | Find Events by Location   |
 
-#### Comment on Posts
-- **Feature**: Users can leave comments on posts.  
-- **Problem Solved**: Promotes discussion and community engagement around shared experiences.
-
-#### Delete Comments
-- **Feature**: Users can delete their own comments.  
-- **Problem Solved**: Gives users control over their shared opinions.
 
 #### View Likes on Posts
 - **Feature**: Users can see how many likes a post has received.  
@@ -400,13 +398,30 @@ Further information is available in the [requirements.txt file](requirements.txt
 
 ## Credits
 
-### Content
-
 ### Code
+
+The following blogs/tutorials complemented my learning for this project, alongside the [Code Institute's](https://codeinstitute.net/ie/) Learning Content.
+
+- [Django Docs](https://www.djangoproject.com/)
+- [Bootstrap Docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- [W3C](https://www.w3.org/)
+- [W3Schools](https://www.w3schools.com/)
+
 
 ### Media
 
+The following sites were used to gather the photographic media used in Stage Score:
+
+- [Pexels](https://www.pexels.com/)
+
+
 ### Acknowledgements
+
+Code Institute 
+
+- [Roo MacArthud](https://github.com/roomacarthur) - Coding Coach
+
+
 
 
 
