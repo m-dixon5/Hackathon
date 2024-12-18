@@ -30,6 +30,49 @@ Blog Details
                 </p>
             </article>
         </div>
+
     </div>
+
+    <div class="container mt-5 p-4 border rounded bg-light">
+        <!-- Comment Form -->
+        {% if user.is_authenticated %}
+        <form method="post" action="{% url 'comment' post.category.slug post.slug %}" class="mb-4">
+            {% csrf_token %}
+            <div class="mb-3">
+                <textarea name="comment" required id="id_comment" class="form-control" placeholder="Add a comment..."
+                    rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+                Submit
+            </button>
+        </form>
+        {% endif %}
+
+        <!-- Display Comments -->
+        <div>
+            <h2 class="h4 mb-4">Comments ({{ comments.count }})</h2>
+            {% for comment in comments %}
+            <div class="mb-4 pb-3 border-bottom">
+                <div class="d-flex justify-content-between small text-muted">
+                    <span class="fw-bold">{{ comment.user.username }}</span>
+                    <div class="d-flex gap-3">
+                        <span>{{ comment.created_at|date:"M d, Y H:i" }}</span>
+                        {% if comment.user == user %}
+                        <form action="{% url 'delete_comment' post.category.slug post.slug comment.id %}" method="post"
+                            class="d-inline">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-link text-danger p-0">Delete</button>
+                        </form>
+                        {% endif %}
+                    </div>
+                </div>
+                <p class="mt-2">{{ comment.comment }}</p>
+            </div>
+            {% empty %}
+            <p class="text-muted">No comments yet. Be the first to comment!</p>
+            {% endfor %}
+        </div>
+    </div>
+
 </main>
 {% endblock %}
