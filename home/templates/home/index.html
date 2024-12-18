@@ -1,1 +1,23 @@
 {% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="hero-container d-flex align-items-center justify-content-center">
+    <div class="hero-text">
+        <h1 class="header-text">StageScore</h1>
+        <p class="callout">Discover, Review and share live music events with the wider community.</p>
+        <button class="sign-up"><a href="/accounts/signup"></a>Sign up</button>
+    </div>
+</div>
+
+<div class="about-container">
+    <div class="about-card">
+        <h2>About</h2>
+        <p>Stage Score is a platform for discovering, reviewing, and sharing unforgettable live music experiences. Whether you're reliving a concert you loved or exploring reviews to plan your next night out, we've got you covered.
+            We celebrate the magic of live music by connecting fans worldwide. Share your thoughts, rate performances, and join a community passionate about artists, venues, and the raw energy of live events. From intimate gigs to stadium spectacles, your voice amplifies the music. 
+            Join us and keep the music alive, one review at a time!
+        </p>
+    </div>
+</div>
+{% endblock %}
