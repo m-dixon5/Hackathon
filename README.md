@@ -192,6 +192,8 @@ We decided to use the following logo:
 
 ### Wireframes
 
+![wireframes](/documentation/images/wireframes-stagescore.png)
+
 ## Features
 
 ### MVP Features
