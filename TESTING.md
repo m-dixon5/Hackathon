@@ -50,9 +50,7 @@ All HTML pages were validated and received a 'xxxxxxxxx' result, as shown above.
 | Edit Review | 0 | 0 |
 | Delete Review | 0 | 0 |
 | Delete Comment | 0 | 0 |
-| Profile | 0 | 0 |
-| Search | 0 | 0 |
-|
+
 
 | Error 403 | 0 | 0 |
 | Error 404 | 0 | 0 |

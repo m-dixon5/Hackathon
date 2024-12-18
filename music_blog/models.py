@@ -1,9 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
-# from django_ckeditor_5.fields import CKEditor5Field 
+
 
 # Create your models here.
+
 
 class Category(models.Model):
     """
@@ -36,9 +37,10 @@ class Category(models.Model):
 
     def __str__(self):
         return self.get_title_display()
-    
+
     def get_absolute_url(self):
         return f"/{self.slug}"
+
 
 class Review(models.Model):
     """
@@ -50,7 +52,8 @@ class Review(models.Model):
     slug = models.SlugField(default='')
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    category = models.ForeignKey(Category, related_name='posts', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, related_name='posts',
+                                 on_delete=models.CASCADE)
     location = models.CharField(max_length=30)
 
     def save(self, *args, **kwargs):
@@ -60,19 +63,21 @@ class Review(models.Model):
 
     def __str__(self):
         return self.title
-    
+
     def get_absolute_url(self):
         return '/%s/' % self.slug
+
 
 class Comment(models.Model):
     """
     Represents a comment made on a music blog post
     """
-    post = models.ForeignKey(Review, related_name="comments", on_delete=models.CASCADE)
+    post = models.ForeignKey(Review, related_name="comments",
+                             on_delete=models.CASCADE)
     comment = models.CharField(max_length=500)
     created_at = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    
+
     class Meta:
         verbose_name = "Comment"
         verbose_name_plural = "Comments"
