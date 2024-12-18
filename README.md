@@ -8,9 +8,9 @@
 
 The aim of this project is to provide an engaging space for music enthusiasts to celebrate live performances, connect with a like-minded community, and explore a dynamic catalog of gig reviews. Stage Score brings the excitement of live music to the digital world, offering a seamless experience for discovering, discussing, and sharing the magic of the stage.
 
-Developed by //
+Developed by [Matt Dixon](https://github.com/m-dixon5)   |   [Guissela Chumbe](https://github.com/guisselacp) |   [Ray Carter](https://github.com/raycarter23) 
 
-View live site here: [Stage Score website]()
+View live site here: [Stage Score website](https://stage-score-8b082b4e7102.herokuapp.com/)
 
 
 
@@ -112,6 +112,19 @@ We selected this colour scheme for our website:
 ![Colour Palette](documentation/images/stage_score_colour_palette.png) 
 
 #### Contrast
+
+We used Adobe’s Colour contrast checker tool to ensure that the colours met web accessibility standards. We wanted to ensure a minimum colour contrast ratio of 7:1 to meet WCAG’s AAA level colour contrast ratio standards.
+
+For our colours, we achieved the following contrast ratios:
+
+| **Purpose**                 | **Hex Code** | **Background** | **Contrast Ratio** | **Meets AAA** |
+|-----------------------------|--------------|----------------|---------------------|---------------|
+| Primary Text Color          | #023047      | #FFFFFF        | 13.85:1            | Yes           |
+| Secondary Text Color        | #000F16      | #FFFFFF        | 19.45:1            | Yes           |
+| Light Accent Background     | #E3F2FD      | #115170        | 7.55:1             | Yes           |
+| Primary Button/Icon Color   | #97FFC9      | #115170        | 7.17:1             | Yes           |
+| Secondary Button/Icon Color | #FFE99D      | #115170        | 7.14:1             | Yes           |
+
 
 ### Fonts
 
