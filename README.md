@@ -323,6 +323,22 @@ We used the MoSCoW Prioritization method for Stage Score, with this four label t
 
 ### Technology and Languages
 
+- HTML
+- CSS
+- JavaScript
+- Python
+- [Git](https://git-scm.com/) used for version control.
+- [Github](https://www.github.com) used for online storage of codebase and Projects tool.
+- [Lucid Chart](https://www.lucidchart.com/pages/) used to create Entity Relationship Diagram.
+- [Figma](https://www.figma.com) for project design planning and wireframe creation.
+- [Coolors](https://coolors.co/) to create the website colour palette.
+- [Adobe Color](https://color.adobe.com) for colour theme creation and accessibility checkers.
+- [Django](https://www.djangoproject.com/) was used as the Python framework for the site.
+- [Cloudinary](https://cloudinary.com/) was used for cloud media storage of user uploaded images.
+- [Heroku](https://www.heroku.com) was used to host the Stage Score application.
+- [WAVE](https://wave.webaim.org/) to evaluate the accessibility of the site.
+
+
 ### Libraries and Frameworks
 
 ### Tools and Programs
