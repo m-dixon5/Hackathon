@@ -100,55 +100,19 @@ Stage Score is designed to cater to a wide range of live music enthusiasts, incl
 
 ## UX Design
 
-### Colour Scheme
+### Colours
 
-- `#023047` - used as the primary text colour
-- `#115170` - used as the background colour for the header and footer
-- `#000F16` - used as the secondary text colour
-- `#FFFFFF` - used as the primary background colour
-- `#E3F2FD` - used as an alternative text colour, for the header and footer background
-- `#97FFC9` - used for buttons and icons on the header and footer background
-- `#FFE99D` - used for buttons and icons on the header and footer background
-
-![Colour Palette](/static/images/Stage%20Score%20Colour%20Palette.png)
-
-We used [Coolors](coolors.co) to generate our colour palette 
+#### Colour Palette 
 
 #### Contrast
 
-We used Adobe’s Colour contrast checker tool to ensure that the colours met web accessibility standards. We wanted to ensure a minimum colour contrast ratio of 7:1 to meet WCAG’s AAA level colour contrast ratio standards.
-
-For our colours, we achieved the following contrast ratios:
-
-| Purpose                   | Hex Code  | Background | Contrast Ratio | Meets AAA |
-|---------------------------|-----------|------------|----------------|-----------|
-| Primary Text Color        | #023047   | #FFFFFF    | 13.85:1        | Yes       |
-| Secondary Text Color      | #000F16   | #FFFFFF    | 19.45:1        | Yes       |
-| Light Accent Background   | #E3F2FD   | #115170    | 7.55:1         | Yes       |
-| Primary Button/Icon Color | #97FFC9   | #115170    | 7.17:1         | Yes       |
-| Secondary Button/Icon Color| #FFE99D  | #115170    | 7.14:1         | Yes       |
-
 ### Fonts
-
-We used ‘Inter’ and ‘Poppins’ as our font choices, and used Google Fonts to import these.
-
-![Typography](/static/images/typography.png)
 
 ### Imagery
 
 ### Favicon
 
 ### Logo
-
-We created two logos for our website using [Logo Design AI](https://logodesign.ai/). The first logo is the one that will show on the white background, and the second logo will be used on our header and footer sections.
-
-**Logo 1** 
-
-![Logo 1](/static/images/stage-score-logo-1.png)
-
-**Logo 2**
-
-![Logo 2](/static/images/stage-score-alt-logo.png)
 
 ## User Stories
 
@@ -332,11 +296,26 @@ After initialising the project idea we moved on to creating an Entity Relationsh
 
 ## Agile Development Process
 
+Stage Score is a project that follow the Agile planning methods. We used our [Github Projects Board](https://github.com/users/m-dixon5/projects/4/views/1) to plan and document the project.
+
+
 ### MoSCoW Prioritisation
 
-### GitHub Projects
+We used the MoSCoW Prioritization method for Stage Score, with this four label types:
+
+- **Must Have**: the 'required', components for this project. This allows us to define the "essential" to achieve the MVP (minimum viable product).
+- **Should Have**: the components that are valuable to the project but not is indispensable at the MVP stage. The 'Must Haves' must receive priority over the 'Should Haves'.
+- **Could Have**: features that could be implemented but are not urgent.
+- **Won't Have**: features that we would like to include in the project, but cannot for time reasons.
+
+
+### GitHub Project
+
+![GitHub Project](documentation/images/github_project.png) 
 
 ### GitHub Issues
+
+![GitHub Issues](documentation/images/project_board.png) 
 
 ## Deployment
 
@@ -355,6 +334,8 @@ After initialising the project idea we moved on to creating an Entity Relationsh
 ### Collaboration Tools
 
 ## Testing
+
+- For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Credits
 
