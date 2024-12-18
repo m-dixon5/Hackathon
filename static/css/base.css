@@ -57,9 +57,9 @@ main {
     margin-bottom: 70px;
     color: #fdfffd;
     padding: 20px;
-  }
+}
   
-  .form-button {
+.form-button {
     padding: 8px 20px;
     border-radius: 10px;
     cursor: pointer;
@@ -71,18 +71,58 @@ main {
     font-size: 15px;
     transition: all 0.5s ease;
     margin-top: 20px;
-  }
+}
   
-  .form-button:hover {
+.form-button:hover {
     letter-spacing: 1px;
     background-color: #115170;
     color: #ffffff;
-  }
+}
   
-  .forgot-password {
+.forgot-password {
     margin-top: 25px;
-  }
+}
 
-  li {
+li {
     color: #ffffff;
-  }
+}
+
+/* Home */
+.about-card {
+    color: #000f16;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+
+.about-container {
+    padding: 20px;
+    margin: 110px 10px;
+}
+
+.hero-container {
+    background-image: url('../images/pexels-oandremoura-2675648.jpg');
+    height: 700px;
+    background-position: center center;
+}
+
+.hero-text {
+    color: #ffffff;
+    background-color: #000f16aa;
+    padding: 60px;
+    border-radius: 5px;
+    margin: 0px 10px;
+}
+
+.header-text {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.sign-up {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+  
