@@ -29,15 +29,15 @@ def create_post(request):
             post = form.save(commit=False)
             post.author = request.user
             post.save()
-            return redirect('blog')
+            return redirect('music_blog')
         
     else:
         form = PostForm()
-    return render(request, 'blog/create_post.html', {'form': form})
+    return render(request, 'music_blog/create_post.html', {'form': form})
 
 @login_required
 def edit_post(request, post_id):
-    post = Post.objects.get(id=post_id, author=request.user)
+    post = Review.objects.get(id=post_id, author=request.user)
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES, instance=post)
 
@@ -48,13 +48,13 @@ def edit_post(request, post_id):
         
     else:
         form = PostForm(instance=post)
-    return render(request, 'blog/edit_post.html', {'form': form})
+    return render(request, 'music_blog/edit_post.html', {'form': form})
 
 @login_required
 def delete_post(request, post_id):
-    post = Post.objects.get(id=post_id, author=request.user)
+    post = Review.objects.get(id=post_id, author=request.user)
     if request.method == 'POST':
         post.delete() 
-        return redirect('blog')
+        return redirect('music_blog')
     
-    return render(request, 'blog/delete_post.html', {'post': post})
+    return render(request, 'music_blog/delete_post.html', {'post': post})

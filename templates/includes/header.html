@@ -18,7 +18,7 @@
                             <a class="nav-link" href="{% url 'music_blog' %}">Reviews</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Add Review</a>
+                            <a class="nav-link" href="{% url 'create_post' %}">Add Review</a>
                         </li>
                         {% if request.user.is_authenticated %}
                         <li class="nav-item">
