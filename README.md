@@ -290,6 +290,10 @@ These features enhance the platform and further address user needs, creating a r
 
 ## Database Design
 
+After initialising the project idea we moved on to creating an Entity Relationship Diagram (ERD). This would act as a visual representation of the database we wanted to implement, covering all the information we would need to store for the project. In addition, the diagram also made the links between each model and how they interact much more clearer. We also refered to this throughout the project to ensure we included all the relevant attributes and didn't miss anything out.
+
+![Project ERD](documentation/images/ERD-hackathon.png)
+
 ## Agile Development Process
 
 Stage Score is a project that follow the Agile planning methods. We used our [Github Projects Board](https://github.com/users/m-dixon5/projects/4/views/1) to plan and document the project.
