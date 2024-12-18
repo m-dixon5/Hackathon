@@ -10,7 +10,7 @@ Blog
     <!-- Featured Post Section -->
     <div class="overflow-hidden position-relative mb-4">
         <a href="{% url 'details' featured_post.category.slug featured_post.slug %}" class="d-block">
-            <img src="{{ featured_post.image.url }}"
+            <img src="{{ featured_post.image.url|default:'static/images/default.jpg' }}"
                 class="w-100 rounded img-fluid object-fit-cover transition-transform hover-scale"
                 alt="{{ featured_post.title }}" style="height: 500px; object-fit: cover;">
             <h2 class="position-absolute bottom-0 start-0 mb-3 ms-3 text-white fw-bold display-4 shadow">
@@ -27,15 +27,16 @@ Blog
     <!-- Recent Posts Grid -->
     <div class="row g-4">
         {% for post in posts %}
+        {% if post.category and post.slug %}
         <div class="col-sm-6 col-lg-4 d-flex align-items-stretch">
             <a href="{% url 'details' post.category.slug post.slug %}" class="card shadow-sm text-decoration-none">
-                <img src="{{ post.image.url }}" class="card-img-top rounded-top" alt="{{ post.title }}"
-                    style="height: 180px; object-fit: cover;">
+                <img src="{{ post.image.url|default:'static/images/default.jpg' }}" class="card-img-top rounded-top"
+                    alt="{{ post.title|default:'Untitled Post' }}" style="height: 180px; object-fit: cover;">
                 <div class="card-body">
-                    <h5 class="card-title text-primary fw-bold">{{ post.title }}</h5>
-                    <span class="badge bg-danger mb-2">{{ post.category }}</span>
+                    <h5 class="card-title text-primary fw-bold">{{ post.title|default:'Untitled Post' }}</h5>
+                    <span class="badge bg-danger mb-2">{{ post.category|default:'Uncategorized' }}</span>
                     <p class="card-text text-muted mb-3">
-                        {{ post.content|slice:"0:100"|safe }}...
+                        {{ post.content|slice:"0:100"|default:'No content available.'|safe }}...
                     </p>
                     <p class="small text-primary text-decoration-underline">
                         {{ post.created_at|timesince }} ago
@@ -43,6 +44,9 @@ Blog
                 </div>
             </a>
         </div>
+        {% endif %}
+        {% empty %}
+        <p class="text-muted text-center">No posts available.</p>
         {% endfor %}
     </div>
 
