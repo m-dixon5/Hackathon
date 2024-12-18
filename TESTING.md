@@ -35,7 +35,7 @@ I have had to follow a different approach for validating my HTML for this projec
 - Paste the copied code into the [validate by input](https://validator.w3.org/#validate_by_input) option.
 - Check for errors and warnings, fix any issues, revalidate by following the above steps and record the results.
 
-![html validation](documentation/testing/html_valid.png)
+![html validation]()
 
 All HTML pages were validated and received a 'xxxxxxxxx' result, as shown above.
 
