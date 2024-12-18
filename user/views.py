@@ -37,7 +37,7 @@ def create_post(request):
 
 @login_required
 def edit_post(request, post_id):
-    post = Post.objects.get(id=post_id, author=request.user)
+    post = Review.objects.get(id=post_id, author=request.user)
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES, instance=post)
 
@@ -52,7 +52,7 @@ def edit_post(request, post_id):
 
 @login_required
 def delete_post(request, post_id):
-    post = Post.objects.get(id=post_id, author=request.user)
+    post = Review.objects.get(id=post_id, author=request.user)
     if request.method == 'POST':
         post.delete() 
         return redirect('music_blog')
