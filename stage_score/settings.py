@@ -51,13 +51,15 @@ INSTALLED_APPS = [
 
     # Custom apps
     'home.apps.CoreConfig',
-    'blog.apps.BlogConfig',
     'user.apps.UserConfig',
+    'music_blog.apps.MusicBlogConfig',
 
     # Third-party apps
     'cloudinary_storage',
     'cloudinary',
     'django_ckeditor_5',
+    'crispy_forms',
+    'crispy_bootstrap4',
 ]
 
 SITE_ID = 1
@@ -168,7 +170,7 @@ CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-LOGOUT_REDIRECT_URL = '/'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 customColorPalette = [
         {
