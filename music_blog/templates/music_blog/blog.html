@@ -9,7 +9,7 @@ Blog
     {% if featured_post %}
     <!-- Featured Post Section -->
     <div class="overflow-hidden position-relative mb-4">
-        <a href="" class="d-block">
+        <a href="{% url 'details' featured_post.category.slug featured_post.slug %}" class="d-block">
             <img src="{{ featured_post.image.url }}"
                 class="w-100 rounded img-fluid object-fit-cover transition-transform hover-scale"
                 alt="{{ featured_post.title }}" style="height: 500px; object-fit: cover;">
@@ -28,7 +28,7 @@ Blog
     <div class="row g-4">
         {% for post in posts %}
         <div class="col-sm-6 col-lg-4 d-flex align-items-stretch">
-            <a href="" class="card shadow-sm text-decoration-none">
+            <a href="{% url 'details' post.category.slug post.slug %}" class="card shadow-sm text-decoration-none">
                 <img src="{{ post.image.url }}" class="card-img-top rounded-top" alt="{{ post.title }}"
                     style="height: 180px; object-fit: cover;">
                 <div class="card-body">
