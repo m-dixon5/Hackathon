@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}
+Blog
+{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    {% if featured_post %}
+    <!-- Featured Post Section -->
+    <div class="overflow-hidden position-relative mb-4">
+        <a href="" class="d-block">
+            <img src="{{ featured_post.image.url }}"
+                class="w-100 rounded img-fluid object-fit-cover transition-transform hover-scale"
+                alt="{{ featured_post.title }}" style="height: 500px; object-fit: cover;">
+            <h2 class="position-absolute bottom-0 start-0 mb-3 ms-3 text-white fw-bold display-4 shadow">
+                {{ featured_post.title }}
+            </h2>
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
+        </a>
+    </div>
+    {% endif %}
+
+    <!-- Recent Posts Heading -->
+    <h1 class="text-center text-primary fw-bold mb-5 mt-4">Recent Posts</h1>
+
+    <!-- Recent Posts Grid -->
+    <div class="row g-4">
+        {% for post in posts %}
+        <div class="col-sm-6 col-lg-4 d-flex align-items-stretch">
+            <a href="" class="card shadow-sm text-decoration-none">
+                <img src="{{ post.image.url }}" class="card-img-top rounded-top" alt="{{ post.title }}"
+                    style="height: 180px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title text-primary fw-bold">{{ post.title }}</h5>
+                    <span class="badge bg-danger mb-2">{{ post.category }}</span>
+                    <p class="card-text text-muted mb-3">
+                        {{ post.content|slice:"0:100"|safe }}...
+                    </p>
+                    <p class="small text-primary text-decoration-underline">
+                        {{ post.created_at|timesince }} ago
+                    </p>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    <div class="d-flex justify-content-center align-items-center py-5 gap-2">
+        {% if posts.has_previous %}
+        <a class="btn btn-primary btn-sm" href="?page=1">&laquo;</a>
+        <a class="btn btn-primary btn-sm" href="?page={{ posts.previous_page_number }}">Prev</a>
+        {% endif %}
+
+        <span class="fw-bold text-primary mx-2">
+            Page {{ posts.number }} of {{ posts.paginator.num_pages }}
+        </span>
+
+        {% if posts.has_next %}
+        <a class="btn btn-primary btn-sm" href="?page={{ posts.next_page_number }}">Next</a>
+        <a class="btn btn-primary btn-sm" href="?page={{ posts.paginator.num_pages }}">&raquo;</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
