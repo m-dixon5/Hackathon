@@ -74,6 +74,8 @@ All HTML pages were validated and received a 'xxxxxxxxx' result, as shown above.
 | Profile  | [no errors](documentation/testing/profile_admin.png) | [no errors](documentation/testing/profile_forms.png) | [no errors](documentation/testing/profile_models.png) | [no errors](documentation/testing/profile_urls.png) | [no errors](documentation/testing/profile_views.png) |
 | Stage Score main app | na | na | na | [no errors](documentation/testing/stagescore_urls.png) | na |
 | Home | na | na | na | [no errors](documentation/testing/home_urls.png) | [no errors](documentation/testing/home_views.png) |
+| User | [no errors](/documentation/images/user-app-admin.py.png) | [no errors](/documentation/images/user-app-forms.py.png) | [no errors](/documentation/images/user-app-models.py.png) | [no errors](/documentation/images/user-app-urls.py.png) | [no errors](/documentation/images/) |
+
 
 <hr>
 
@@ -84,3 +86,17 @@ All HTML pages were validated and received a 'xxxxxxxxx' result, as shown above.
 ![css validation](documentation/testing/css_valid.png)
 
 <hr> 
+
+## Bugs
+
+| **Bugs**                    | **Location**                              | **Cause**                                                                               | **Solution / Fix**                                                                                                                                              | **Status** |
+|-----------------------------|------------------------------------------|---------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
+| Relation does not exist error | Blog app database tables (blog_category and blog_review) | Corrupted database state or missing tables due to failed migrations.                 | Deleted the blog app entirely. Created a new app named `music_blog`, redefined models, ran `makemigrations` and `migrate` to rebuild the database tables.      | Fixed      |
+| InvalidCursorName error      | Admin page for `blog/review/add/`         | Missing database table caused by incomplete or failed migrations.                     | Removed the broken blog app. Updated references across the project to point to the new `music_blog` app. Reapplied migrations and fixed database schema.       | Fixed      |
+| Model sync issues            | Profile view `/profile/`                 | Missing or inconsistent `blog_review` table due to migration failures.                | Created clean migrations for the `music_blog` app. Ensured all related views, URLs, and templates referenced the new app. Applied migrations to sync the schema. | Unfixed    |
+| Pagination Error             | Blog page, next button                   | One or more posts were missing slug values or had invalid data (e.g., missing author or category). | Ensure the slug is auto-populated in the model, and filter out posts with invalid or missing fields in the view.                                              | Fixed      |
+| Missing Slug Field           | Blog posts                               | Posts created before the slug field was auto-populated lacked valid slugs.            | Update the `Review` model to auto-generate slugs using the `slugify` method if a slug is missing.                                                             | Fixed      |
+| Author Deletion Error        | Blog posts                               | A post was linked to an author who was deleted, causing a `NoneType` issue in queries and views. | Change the `author` field to `on_delete=models.SET_NULL` and add `null=True` and `blank=True` options to the field.                                            | Fixed      |
+| Orphaned Posts               | Blog database                            | Existing data in the database had posts without slugs, authors, or categories.        | Clean up the database by deleting or fixing posts with missing slugs, authors, or categories using Django shell.                                              | Fixed      |
+| Broken Template Links        | Blog template (HTML)                     | Links to details page failed due to missing slug or category in the URL patterns.      | Validate posts in the template and show only valid posts with slug and category to prevent broken links.                                                      | Fixed      |
+| Data Integrity Validation Missing | Blog model and admin                   | There were no validations in place to prevent saving invalid posts without slugs or authors. | Add validation in the `clean` method of the `Review` model to enforce data integrity during save operations.                                                   | Fixed      |
