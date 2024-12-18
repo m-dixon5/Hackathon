@@ -1,5 +1,5 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Review, Category
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import Review, Category, Comment
 from .forms import CommentForm
 from django.core.paginator import Paginator
 
@@ -21,7 +21,7 @@ def details(request, category_slug, slug):
     return render(request, 'music_blog/details.html', {'post': post, 'comments': comments, 'form': form})
 
 def comment(request, category_slug, slug):
-    post = get_object_or_404(Post, slug=slug)
+    post = get_object_or_404(Review, slug=slug)
     if request.method == 'POST':
         form = CommentForm(request.POST)
         if form.is_valid():
